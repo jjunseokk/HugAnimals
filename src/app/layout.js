@@ -1,5 +1,10 @@
-import './globals.css'
+import './globals.scss'
 import { Inter } from 'next/font/google'
+import Image from 'next/image';
+
+import navBarLogo from '../img/navBarLogo.png';
+import Link from 'next/link';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +16,42 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='mainLogo'>
+          <Link href={'/'}>
+            <Image className='navBarLogo' src={navBarLogo} alt='navBarLogo' />
+          </Link>
+          <div className='navBarAuth'>
+            <p>로그인</p>
+            <p>회원가입</p>
+          </div>
+        </div>
+        <div className='navBar'>
+          <ul className='navBarMenu'>
+            <li>About</li>
+            <li>동물보호센터</li>
+            <li>보호 중 동물</li>
+          </ul>
+
+        </div>
+        {children}
+        <div className='footer'>
+          <div className='policyArea'>
+            <ul>
+              <li>개인정보처리방침</li>
+              <li>이메일무단수집거부</li>
+              <li>저작권정책</li>
+            </ul>
+          </div>
+          <div className='information'>
+            <p>
+              [00000] 서울특별시 00구 00로 00 <br />
+              대표번호 00-000-000 | FAX : 00-000-0000 <br />
+              Copyright (C) ALL RIGHTS RESERVED.
+            </p>
+          </div>
+        </div>
+      </body>
     </html>
   )
 }

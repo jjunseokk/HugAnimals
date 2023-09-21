@@ -1,0 +1,93 @@
+.detail-container {
+    font-size: 1em;
+    color: #111111;
+
+    .detail-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding: 0px 20px;
+
+        h2 {
+            text-align: center;
+            padding: 10px 0px;
+
+
+        }
+
+        .detail-adoption-btn {
+            background-color: #CEE8FA;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px #111111;
+            cursor: pointer;
+
+            .detail-heart {
+                color: white;
+                margin-right: 5px;
+            }
+        }
+    }
+
+
+    .detail-wrap {
+        padding: 0px 20px;
+
+        .detail-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .detail-banner {
+            margin: 5px auto;
+            display: block;
+            width: 350px;
+            height: 350px;
+        }
+
+        .detail-profile {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+
+            .detail-profile-img {
+                width: 47%;
+                height: 400px;
+                display: flex;
+                background: linear-gradient(238deg, rgba(255, 255, 255, 1) 0%, rgba(206, 232, 250, 0.7296589176829269) 40%, rgba(116, 171, 237, 1) 100%);
+                justify-content: center;
+                align-items: center;
+            }
+
+            .detail-profile-text {
+                width: 47%;
+            }
+        }
+
+        .detail-information {
+            width: 80%;
+            margin: 0 auto;
+
+            h1 {
+                text-align: center;
+                color: #CEE8FA;
+                text-shadow: 1px 1px #bbb;
+                margin-top: 50px;
+                border-bottom: 1px solid #ccc;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width : 2300px) {
+    .detail-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

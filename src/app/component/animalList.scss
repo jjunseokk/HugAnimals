@@ -1,0 +1,72 @@
+.animal-container {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin: 10px 0px;
+
+            img {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            h2 {
+                padding: 0;
+                margin: 0;
+                color: #4A4949;
+            }
+
+            button {
+                color: #4A4949;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient(to top, #CEE8FA 40%, transparent 40%);
+                }
+            }
+        }
+    }
+
+
+    .animal-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: auto;
+        overflow-x: scroll !important;
+
+        .animal-list {
+            border: 1px solid #ccc;
+            margin: 0px 5px;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: #1111;
+            }
+
+            .animal-information {
+                height: 150px;
+                color: #4A4949;
+
+                p {
+                    font-size: 0.8em;
+                    margin: 10px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

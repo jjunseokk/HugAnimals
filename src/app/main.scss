@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.main {
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+
+    .mainBannerArea {
+        position: relative;
+
+        .mainBanner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainBannerText {
+            font-family: 'Jua', sans-serif;
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(0, -50%);
+            text-shadow: 5px 5px 5px black;
+
+            span {
+                font-size: 0.8em;
+            }
+        }
+
+        .mainBannerScroll {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            animation: scrollUpDown infinite 2s;
+
+            p {
+                color: white;
+            }
+        }
+    }
+
+    .mainProcess {
+        text-align: center;
+
+        img {
+            width: 90%;
+            height: 100%;
+            margin-top: 50px;
+        }
+    }
+
+    .mainMiddleBanner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .mainAnimalInformation {
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        .mainLeftArea,
+        .mainRightArea {
+            width: 50%;
+            height: 500px;
+            background: #CEE8FA;
+            position: relative;
+        }
+
+        .mainLeftArea {
+            cursor: pointer;
+
+            .title {
+                position: absolute;
+                top: 0;
+                right: 50px;
+                font-weight: bold;
+                font-family: 'Jua', sans-serif;
+                font-size: 2.5em;
+            }
+
+            .cat {
+                position: absolute;
+                bottom: 80px;
+                z-index: 1;
+            }
+
+            .mainLeftBox {
+                width: 80%;
+                height: 24%;
+                padding: 0;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background: rgba($color: #5996BF, $alpha: 0.5);
+                position: absolute;
+                bottom: 30px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .arrow {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .mainRightArea {
+            background: #CEE8B4;
+            cursor: pointer;
+
+            .title {
+                position: absolute;
+                top: 0;
+                left: 70px;
+                font-weight: bold;
+                font-family: 'Jua', sans-serif;
+                font-size: 2.5em;
+            }
+
+            .cat {
+                position: absolute;
+                right: 0;
+                bottom: 80px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@keyframes scrollUpDown {
+    to {
+        bottom: 5%;
+    }
+
+    from {
+        bottom: 10%;
+    }
+}
+
+
+@media screen and (min-width: 2300px) {
+    .main {
+        padding: 0;
+        margin: 0 auto;
+        font-size: 1em;
+        width: 80%;
+
+        .mainBannerArea {
+            position: relative;
+
+            .mainBanner {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mainBannerText {
+                font-family: 'Jua', sans-serif;
+                font-size: 3em;
+                font-weight: bold;
+                color: white;
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                transform: translate(0, -50%);
+                text-shadow: 5px 5px 5px black;
+
+                span {
+                    font-size: 0.8em;
+                }
+            }
+
+            .mainBannerScroll {
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translate(-50%);
+                text-align: center;
+                animation: scrollUpDown infinite 2s;
+
+                p {
+                    color: white;
+                }
+            }
+        }
+
+        .mainProcess {
+            text-align: center;
+
+            img {
+                width: 90%;
+                height: 100%;
+                margin-top: 50px;
+            }
+        }
+
+
+
+        .mainMiddleBanner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mainAnimalInformation {
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            .mainLeftArea,
+            .mainRightArea {
+                width: 50%;
+                height: 500px;
+                background: #CEE8FA;
+                position: relative;
+            }
+
+            .mainLeftArea {
+                cursor: pointer;
+
+                .title {
+                    position: absolute;
+                    top: 0;
+                    right: 50px;
+                    font-weight: bold;
+                    font-family: 'Jua', sans-serif;
+                    font-size: 2.5em;
+                }
+
+                .cat {
+                    position: absolute;
+                    bottom: 80px;
+                    z-index: 1;
+                }
+
+                .mainLeftBox {
+                    width: 80%;
+                    height: 24%;
+                    padding: 0;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    background: rgba($color: #5996BF, $alpha: 0.5);
+                    position: absolute;
+                    bottom: 30px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .arrow {
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .mainRightArea {
+                background: #CEE8B4;
+                cursor: pointer;
+
+                .title {
+                    position: absolute;
+                    top: 0;
+                    left: 70px;
+                    font-weight: bold;
+                    font-family: 'Jua', sans-serif;
+                    font-size: 2.5em;
+                }
+
+                .cat {
+                    position: absolute;
+                    right: 0;
+                    bottom: 80px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
