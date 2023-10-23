@@ -1,0 +1,121 @@
+.animal {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .animal-category-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: 10%;
+            margin: 50px 5px 0px 5px;
+            height: 30px;
+            border: 1px solid black;
+            background: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background: #CEE8FA;
+                transition: all .5s;
+            }
+        }
+        .active{
+            background: #CEE8FA;
+        }
+    }
+
+    .animalBox {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .animal-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                width: 50%;
+                height: 50%;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+
+        .animalBox-Box {
+            width: 300px;
+            height: 280px;
+            margin: 20px 10px;
+            flex: 0 0 20%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .animalBox-information {
+                display: none;
+            }
+
+            &:hover {
+                .animalBox-information {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background: rgba($color: #000000, $alpha: 0.3);
+                    color: white;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.animalBox-pagination {
+    margin: 15px 0px;
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 50px;
+        margin: 0 auto;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: 0px 5px;
+            background: #CEE8FA;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .active{
+            background: white;
+            color: #CEE8FA;
+            border: 1px solid black;
+        }
+    }
+
+}

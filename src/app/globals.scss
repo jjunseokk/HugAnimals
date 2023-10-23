@@ -16,7 +16,7 @@ body {
     border-bottom: 1px solid #ccc;
 
     .navBarLogo {
-        width: 15%;
+        width: 10%;
         height: 100%;
     }
 
@@ -55,6 +55,10 @@ body {
         li {
             font-size: 1.2em;
             cursor: pointer;
+            a{
+                text-decoration: none;
+                color: black;
+            }
         }
     }
 }
@@ -63,6 +67,7 @@ body {
     width: 100%;
     height: 300px;
     font-family: 'Jua', sans-serif;
+    border-top: 1px solid #ccc;
 
     .policyArea {
         height: 150px;

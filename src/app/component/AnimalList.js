@@ -20,9 +20,7 @@ export default function AnimalList(props) {
 
     // 리덕스 데이터를 불러온다.
     const loading = useSelector((state) => state.animal);
-    console.log("데이터", animalList)
-
-
+    // console.log("데이터", animalList)
 
     // 리덕스에 액션을 취해서 store에 저장한다.
     const getAnimals = () => {

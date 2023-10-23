@@ -1,0 +1,19 @@
+.about-container {
+    width: 100%;
+
+    .about-wrap {
+        width: 80%;
+        margin: 0 auto;
+        background: red;
+
+        .aboutBox {
+            width: 50%;
+            height: 600px;
+            padding: 20px;
+            background: skyblue;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+    }
+}

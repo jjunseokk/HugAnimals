@@ -28,9 +28,9 @@ export default function RootLayout({ children }) {
         </div>
         <div className='navBar'>
           <ul className='navBarMenu'>
-            <li>About</li>
-            <li>동물보호센터</li>
-            <li>보호 중 동물</li>
+            <li><Link href={'/about'}>About</Link></li>
+            <li><Link href={'/'}> 동물보호센터</Link></li>
+            <li><Link href={'/animal'}> 보호 중 동물</Link></li>
           </ul>
 
         </div>
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
             </p>
           </div>
         </div>
-      </body>
-    </html>
+      </body >
+    </html >
   )
 }

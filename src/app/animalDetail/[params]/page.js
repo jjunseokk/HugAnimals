@@ -8,6 +8,7 @@ import Image from 'next/image';
 import detailBanner from '../../../img/detailBanner.png';
 import girl from '../../../img/girl.png';
 import man from '../../../img/man.png';
+import detail from '../../../img/detail.png';
 
 export default function AnimalDetail(props) {
     // 나이
@@ -64,11 +65,7 @@ export default function AnimalDetail(props) {
                     </div>
                 </div>
                 <div className='detail-information'>
-                    <h1>입양동물 의료 분담금 발생</h1>
-                    <p>
-                        HugAnimals의 모든 보호동물은 구조 과정에서부터 병원 진료와 예방 접종 등의 의료비가 발생합니다.
-                        동물입양 의료분담금은 보호동물에게 사용되는 의료 비용에 대한 최소한의 비용입니다.
-                    </p>
+                    <Image src={detail} alt='' />
                 </div>
             </div>
         </div>

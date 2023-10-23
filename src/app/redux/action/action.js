@@ -48,7 +48,7 @@ function getAnimalsDetail() {
     return async (dispatch) => {
         try {
             dispatch({ type: "GET_REQUEST" });
-            const animalDetailApi = api.get(`abandonmentPublicSrvc/abandonmentPublic?bgnde=20211201&endde=20211231&pageNo=1&numOfRows=20&serviceKey=${API_KEY}&_type=json`);
+            const animalDetailApi = api.get(`abandonmentPublicSrvc/abandonmentPublic?bgnde=20211201&endde=20231231&pageNo=1&numOfRows=20&serviceKey=${API_KEY}&_type=json`);
 
             let [animal_detail] = await Promise.all([animalDetailApi])
 
@@ -65,6 +65,28 @@ function getAnimalsDetail() {
     }
 }
 
+function getAnimalList(data) {
+    let upKind = data[0] == "전체" ? "" : data[0] == "개" ? 417000 : 422400;
+
+    return async (dispatch) => {
+        try {
+            dispatch({ type: "GET_REQUEST" });
+            const animalList = api.get(`abandonmentPublicSrvc/abandonmentPublic?bgnde=20211201&endde=20231231&pageNo=${data[1]}&numOfRows=20&serviceKey=${API_KEY}&upkind=${upKind}&_type=json`)
+
+            let [animal_list] = await Promise.all([animalList])
+
+            dispatch({
+                type: "GET_ANIMAL_LIST",
+                payload: {
+                    animal_list: animal_list.data,
+                }
+            })
+        } catch (error) {
+            dispatch({ type: "GET_FAILURE" })
+        }
+    }
+}
+
 export const Action = {
-    getTest, getAnimals, getAnimalsDetail
+    getTest, getAnimals, getAnimalsDetail, getAnimalList
 }
