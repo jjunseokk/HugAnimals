@@ -1,6 +1,8 @@
 'use client'
 
-import './about.scss'
+import './about.scss';
+import dog from '../../img/about.gif'
+import Image from 'next/image';
 import { motion } from "framer-motion";
 
 
@@ -27,6 +29,17 @@ const item = {
     }
 };
 
+const text = {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { // 아이템 애니메이션을 조절합니다.
+            duration: 2, // 애니메이션 지속 시간을 조정합니다. 1초로 설정할 수 있습니다.
+        }
+    }
+};
+
 export default function About() {
     return (
         <div className="about-container">
@@ -39,7 +52,17 @@ export default function About() {
                     <motion.div
                         variants={item}
                         className='aboutBox'>
-                        zxczxczxczxc
+                        <Image src={dog} alt='' />
+                        <motion.div
+                            className='aboutBox-contact'
+                        >
+                            <motion.h1
+                                variants={text}
+                            >
+                                누구보다 반려동물을 사랑하는 <span >여러분</span> 입니다. <br />
+                                귀여운 동물을 사랑하는 <span>HugAnimals</span>와 함께해요
+                            </motion.h1>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             </div>
