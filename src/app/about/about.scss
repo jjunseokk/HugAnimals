@@ -2,18 +2,49 @@
     width: 100%;
 
     .about-wrap {
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
-        background: red;
 
         .aboutBox {
-            width: 50%;
+            width: 100%;
             height: 600px;
-            padding: 20px;
             background: skyblue;
-            margin: 0 auto;
+            margin: 100px auto;
             border: 1px solid black;
             border-radius: 20px;
+            position: relative;
+            
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+
+            .aboutBox-contact {
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: .5);
+                
+
+                position: absolute;
+                top: 0%;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                text-align: center;
+
+                h1 {
+                    color: white;
+
+                    span {
+                        color: #CEE8FA;
+                    }
+                }
+            }
         }
     }
 }

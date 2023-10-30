@@ -45,9 +45,6 @@ export default function Home() {
       </div>
 
       {/* <div className="mainProcess">
-        <Image src={process} alt="process" />
-      </div> */}
-      <div className="mainProcess">
         <div className="mainProcess-titleBox">
           <p>
             반려동물 <br />
@@ -61,7 +58,7 @@ export default function Home() {
         <ProcessBox img={process_4} text="반려동물을 위해 공부할 각오" />
         <ProcessBox img={process_5} text="아플 때 치료와 중성화수술 실천" />
         <ProcessBox img={process_6} text="경제적 부담을 짊어질 의사와 능력" />
-      </div>
+      </div> */}
 
       <Provider store={store}>
         <AnimalList upkind={417000} />
