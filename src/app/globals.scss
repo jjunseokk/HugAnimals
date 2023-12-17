@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+$margin :320px;
 
 li {
     list-style: none;
+}
+
+a {
+    color: #151515;
+    text-decoration: none;
 }
 
 body {
@@ -10,32 +16,23 @@ body {
 }
 
 .mainLogo {
-    text-align: center;
-    position: relative;
-    font-family: 'Jua', sans-serif;
-    border-bottom: 1px solid #ccc;
+    margin-left: $margin;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .navBarLogo {
-        width: 10%;
-        height: 100%;
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .navBarAuth {
+    ul {
         display: flex;
-        justify-content: space-around;
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translate(0, -50%);
 
-        p {
-            margin: 0px 10px;
-            cursor: pointer;
-            color: #aaaaaa;
-
-            &:hover {
-                color: #CEE8FA;
-            }
+        li {
+            padding: 0px 15px;
         }
     }
 }
@@ -55,7 +52,8 @@ body {
         li {
             font-size: 1.2em;
             cursor: pointer;
-            a{
+
+            a {
                 text-decoration: none;
                 color: black;
             }

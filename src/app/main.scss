@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-.main {
+
+$margin :320px;
+$font-large : 24px;
+$font-bold : 700;
+
+.main-container {
     padding: 0;
     margin: 0;
     font-size: 1em;
@@ -14,7 +19,6 @@
         }
 
         .mainBannerText {
-            font-family: 'Jua', sans-serif;
             font-size: 3em;
             font-weight: bold;
             color: white;
@@ -37,144 +41,94 @@
             text-align: center;
             animation: scrollUpDown infinite 2s;
 
-            p {
-                color: white;
+            >p {
+                color: white
             }
+
         }
     }
 
-    .mainProcess {
-        width: 90%;
-        margin: 50px auto;
-        padding: 0;
-        font-family: 'Jua', sans-serif;
-        display: flex;
+    .main-wrap {
+        width: 1280px;
+        margin-top: 24px;
+        margin-left: $margin;
 
-        .mainProcess-titleBox {
-            padding: 0px 10px;
-            width: 20%;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            line-height: 60px;
-
-            p {
-                font-size: 2.5em;
-                color: #ccc;
-
-                strong {
-                    color: #111;
-                }
-            }
-        }
-
-        .processBox-container {
-            width: 20%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            margin: 0px 10px;
-            padding: 0px 5px;
-
-            img {
-                width: 40%;
-                height: 35%;
-            }
-
-            div {
-                height: 60px;
-            }
-        }
-
-    }
-
-    .moreBtn {
-        text-align: right;
-        margin-right: 100px;
-        cursor: pointer;
-    }
-
-
-    .mainMiddleBanner {
-        width: 100%;
-        height: 100%;
-    }
-
-    .mainAnimalInformation {
-        padding: 0;
-        margin: 0;
-        display: flex;
-
-        .mainLeftArea,
-        .mainRightArea {
-            width: 50%;
-            height: 500px;
-            background: #CEE8FA;
-            position: relative;
-        }
-
-        .mainLeftArea {
+        .moreBtn {
+            text-align: right;
             cursor: pointer;
+        }
 
-            .title {
-                position: absolute;
-                top: 0;
-                right: 50px;
-                font-weight: bold;
-                font-family: 'Jua', sans-serif;
-                font-size: 2.5em;
+        a {
+            text-decoration: none;
+
+            >p {
+                color: black;
             }
+        }
 
-            .cat {
-                position: absolute;
-                bottom: 80px;
-                z-index: 1;
-            }
-
-            .mainLeftBox {
-                width: 80%;
-                height: 24%;
-                padding: 0;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-                background: rgba($color: #5996BF, $alpha: 0.5);
-                position: absolute;
-                bottom: 30px;
+        .mainAdopt {
+            .adoptTitle {
                 display: flex;
-                justify-content: flex-end;
                 align-items: center;
+                font-size: $font-large;
+                font-weight: $font-bold;
 
-                .arrow {
-                    margin-right: 20px;
+                >img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                >p {
+                    margin-left: 15px;
                 }
             }
-        }
 
-        .mainRightArea {
-            background: #CEE8B4;
-            cursor: pointer;
+            .adoptSwiper {
+                padding: 50px 0px;
+                .item-area {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
 
-            .title {
-                position: absolute;
-                top: 0;
-                left: 70px;
-                font-weight: bold;
-                font-family: 'Jua', sans-serif;
-                font-size: 2.5em;
+                    img {
+                        width: 50%;
+                        height: 120px;
+                    }
+
+                    p {
+                        white-space: pre-line;
+                        text-align: center;
+                    }
+                }
+
+                .swiper-button-next {
+                    &::after {
+                        color: black;
+                    }
+                }
+                .swiper-button-prev {
+                    &::after {
+                        color: black;
+                    }
+                }
+
             }
-
-            .cat {
+        }
+        .campaign{
+            padding : 50px 0px;
+            position: relative;
+            h2{
                 position: absolute;
-                right: 0;
-                bottom: 80px;
-                z-index: 1;
+                top: 50%;
+                left: 10%;
+                transform: translate(0%, -50%);
             }
         }
     }
+
+
+
 }
 
 @keyframes scrollUpDown {
@@ -264,98 +218,10 @@
                 text-align: center;
                 animation: scrollUpDown infinite 2s;
 
-                p {
-                    color: white;
-                }
-            }
-        }
-
-        .mainProcess {
-            text-align: center;
-
-            img {
-                width: 90%;
-                height: 100%;
-                margin-top: 50px;
-            }
-        }
-
-
-
-        .mainMiddleBanner {
-            width: 100%;
-            height: 100%;
-        }
-
-        .mainAnimalInformation {
-            padding: 0;
-            margin: 0;
-            display: flex;
-
-            .mainLeftArea,
-            .mainRightArea {
-                width: 50%;
-                height: 500px;
-                background: #CEE8FA;
-                position: relative;
-            }
-
-            .mainLeftArea {
-                cursor: pointer;
-
-                .title {
-                    position: absolute;
-                    top: 0;
-                    right: 50px;
-                    font-weight: bold;
-                    font-family: 'Jua', sans-serif;
-                    font-size: 2.5em;
+                >p {
+                    color: white
                 }
 
-                .cat {
-                    position: absolute;
-                    bottom: 80px;
-                    z-index: 1;
-                }
-
-                .mainLeftBox {
-                    width: 80%;
-                    height: 24%;
-                    padding: 0;
-                    border-top-right-radius: 20px;
-                    border-bottom-right-radius: 20px;
-                    background: rgba($color: #5996BF, $alpha: 0.5);
-                    position: absolute;
-                    bottom: 30px;
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-
-                    .arrow {
-                        margin-right: 20px;
-                    }
-                }
-            }
-
-            .mainRightArea {
-                background: #CEE8B4;
-                cursor: pointer;
-
-                .title {
-                    position: absolute;
-                    top: 0;
-                    left: 70px;
-                    font-weight: bold;
-                    font-family: 'Jua', sans-serif;
-                    font-size: 2.5em;
-                }
-
-                .cat {
-                    position: absolute;
-                    right: 0;
-                    bottom: 80px;
-                    z-index: 1;
-                }
             }
         }
     }
