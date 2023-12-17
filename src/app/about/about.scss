@@ -10,10 +10,8 @@
             height: 600px;
             background: skyblue;
             margin: 100px auto;
-            border: 1px solid black;
             border-radius: 20px;
             position: relative;
-            
 
             img {
                 width: 100%;
@@ -25,8 +23,6 @@
                 width: 100%;
                 height: 100%;
                 background: rgba($color: #000000, $alpha: .5);
-                
-
                 position: absolute;
                 top: 0%;
                 border-radius: 20px;
@@ -39,12 +35,82 @@
 
                 h1 {
                     color: white;
+                    font-size: 70px;
 
                     span {
-                        color: #CEE8FA;
+                        color: #0C8CE9;
                     }
                 }
             }
+        }
+
+        .aboutBox-second {
+            text-align: center;
+
+            >h1 {
+                font-size: 70px;
+            }
+
+            >p {
+                font-size: 30px;
+
+                span {
+                    color: #0C8CE9;
+                }
+            }
+
+            .itemContainer {
+                position: relative;
+
+                .aboutItem {
+                    height: 200px;
+                    width: 50%;
+                    .itemBox {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-content: center;
+
+                        >img {
+                            width: 20%;
+                        }
+
+                        div {
+                            width: 70%;
+                            text-align: start;
+
+                            p {
+                                white-space: pre-line;
+                                text-align: start;
+                                margin: 0;
+                            }
+
+                            .title {
+                                font-size: 30px;
+                                color: #0C8CE9;
+                                font-weight: bold;
+                                margin-bottom: 21px;
+                            }
+
+                            .contact {
+                                margin-bottom: 9px;
+                            }
+
+                            button {
+                                background: none;
+                                border: none;
+                                padding: 0;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    margin-left: 50%;
+                }
+            }
+
         }
     }
 }

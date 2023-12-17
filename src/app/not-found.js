@@ -3,7 +3,7 @@ import './main.scss';
 import notFoundBg from '../img/notFoundBg.png';
 import Image from 'next/image';
 
-export default function NotFound() {
+export default function NotFound(props) {
   return (
     <div className='not-found' >
       <Image src={notFoundBg} alt='' />

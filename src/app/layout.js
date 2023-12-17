@@ -18,21 +18,20 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className='mainLogo'>
-          <Link href={'/'}>
-            <Image className='navBarLogo' src={navBarLogo} alt='navBarLogo' />
-          </Link>
-          <div className='navBarAuth'>
-            <p>로그인</p>
-            <p>회원가입</p>
+          <div>
+            <Link href={'/'}>
+              <Image src={navBarLogo} alt='Logo' />
+            </Link>
+            <ul>
+              <li><Link href={'/about'}>About</Link></li>
+              <li><Link href={'/'}> 동물보호센터</Link></li>
+              <li><Link href={'/animal'}> 보호 중 동물</Link></li>
+            </ul>
           </div>
-        </div>
-        <div className='navBar'>
-          <ul className='navBarMenu'>
-            <li><Link href={'/about'}>About</Link></li>
-            <li><Link href={'/'}> 동물보호센터</Link></li>
-            <li><Link href={'/animal'}> 보호 중 동물</Link></li>
+          <ul>
+            <li><Link href={'/'}>로그인</Link></li>
+            <li><Link href={'/'}> 회원가입</Link></li>
           </ul>
-
         </div>
         {children}
         <div className='footer'>

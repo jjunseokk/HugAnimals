@@ -11,7 +11,7 @@ import dogFoot from '../../img/dogFoot.png';
 import girl from '../../img/girl.png';
 import man from '../../img/man.png';
 
-export default function AnimalList(props) {
+export default function AnimalList({upKind}) {
     // 디스패치
     const dispatch = useDispatch();
 
@@ -20,11 +20,10 @@ export default function AnimalList(props) {
 
     // 리덕스 데이터를 불러온다.
     const loading = useSelector((state) => state.animal);
-    // console.log("데이터", animalList)
 
     // 리덕스에 액션을 취해서 store에 저장한다.
     const getAnimals = () => {
-        dispatch(Action.getAnimals(props.upkind));
+        dispatch(Action.getAnimals(upKind));
     }
 
     // 한번만 실행
